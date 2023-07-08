@@ -13,6 +13,22 @@ body {
 }
 #root {
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+}
+
+.App {
+  background: white;
+  width: 100%;
+  height: 100vh;
+}
+
+.container__app {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+}
+
+.main__view__page {
+  background: white;
 }
