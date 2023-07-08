@@ -7,6 +7,7 @@ import ServicePage from "../pages/services";
 import WorkPage from "../pages/work";
 import BlogPage from "../pages/blog";
 import ContactPage from "../pages/contact";
+import NavMobile from "../components/navMobile";
 export default function MainView() {
   return (
     <div className="main__view__page">
@@ -19,6 +20,7 @@ export default function MainView() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Outlet />
+      <NavMobile></NavMobile>
     </div>
   );
 }
