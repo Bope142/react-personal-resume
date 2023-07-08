@@ -42,11 +42,23 @@ export default function Navbar() {
       <TitleNavBar />
       <div className="link__nav">
         <NavLinkNavbar pathLink="/" linkText="Home" icons={home_icons} />
-        <NavLinkNavbar pathLink="/" linkText="About" icons={contact_icons} />
-        <NavLinkNavbar pathLink="/" linkText="Services" icons={service_icons} />
-        <NavLinkNavbar pathLink="/" linkText="Works" icons={work_icons} />
-        <NavLinkNavbar pathLink="/" linkText="Blog" icons={blog_icons} />
-        <NavLinkNavbar pathLink="/" linkText="Contact" icons={call_icons} />
+        <NavLinkNavbar
+          pathLink="/about"
+          linkText="About"
+          icons={contact_icons}
+        />
+        <NavLinkNavbar
+          pathLink="/service"
+          linkText="Services"
+          icons={service_icons}
+        />
+        <NavLinkNavbar pathLink="/work" linkText="Works" icons={work_icons} />
+        <NavLinkNavbar pathLink="/blog" linkText="Blog" icons={blog_icons} />
+        <NavLinkNavbar
+          pathLink="/contact"
+          linkText="Contact"
+          icons={call_icons}
+        />
       </div>
       <BottomSectionNav />
     </div>
