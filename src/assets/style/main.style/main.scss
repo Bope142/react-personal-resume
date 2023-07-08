@@ -1,0 +1,18 @@
+@import "./reset.scss";
+@import "./variable.scss";
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  font-family: $font_regular;
+}
+
+* {
+  user-select: none !important;
+}
+#root {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
