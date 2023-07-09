@@ -1,0 +1,66 @@
+@import "../main.style/variable.scss";
+.link-item-nav {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  column-gap: 25px;
+  padding: 8px;
+  flex: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.3s linear;
+  z-index: 4;
+  outline: none;
+  font-family: $font_regular;
+  &::after {
+    content: "";
+    background: rgb(255, 255, 255);
+    position: absolute;
+    height: 100%;
+    width: 16%;
+    left: 0%;
+    top: 50%;
+    border-radius: 0.5rem;
+    transform: translateY(-50%);
+    transition: all 0.3s linear;
+    z-index: 0;
+  }
+  & * {
+    z-index: 4;
+  }
+  & svg {
+    height: 1.3rem;
+    width: 1.3rem;
+    & * {
+      fill: $neutral_1;
+    }
+  }
+  &:hover {
+    color: $neutral_1 !important;
+    &::after {
+      width: 100%;
+    }
+    & svg {
+      & * {
+        fill: $neutral_1 !important;
+      }
+    }
+  }
+}
+.active-item {
+  background: $neutral_1;
+  & * {
+    color: $neutral_1 !important;
+  }
+  & svg {
+    & * {
+      fill: $neutral_1 !important;
+    }
+  }
+}
