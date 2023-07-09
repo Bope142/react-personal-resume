@@ -1,0 +1,46 @@
+@import "../main.style/variable.scss";
+
+.btn {
+  outline: none;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 0.3rem;
+  font-family: $font_medium;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    height: 100%;
+    transform: translateY(-50%);
+    transition: all 0.3s linear;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.041);
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.btn-icons {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 0.9rem;
+  & svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    flex: none;
+  }
+}
+
+.btn-clr-black {
+  background: $neutral_1;
+  color: white;
+  & svg * {
+    fill: white;
+  }
+}
