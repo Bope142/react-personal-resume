@@ -1,0 +1,35 @@
+@import "../main.style/variable.scss";
+
+.container__service_page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.container__service_page .service__overview {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  & .overview__detail {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.2rem;
+  }
+  & .btn {
+    align-self: flex-start;
+  }
+}
+
+.container__service_page .service__content_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container__service_page {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+}

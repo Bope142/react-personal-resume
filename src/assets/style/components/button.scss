@@ -8,6 +8,11 @@
   font-family: $font_regular !important;
   position: relative;
   font-size: 0.9rem;
+  flex: none !important;
+  opacity: 1 !important;
+  & * {
+    opacity: 1;
+  }
   &::after {
     content: "";
     position: absolute;

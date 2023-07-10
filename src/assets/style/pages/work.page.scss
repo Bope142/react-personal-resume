@@ -1,0 +1,32 @@
+@import "../main.style/variable.scss";
+
+.container__service_work {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
+
+.container__service_work .work__title_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & .btn {
+    align-self: center;
+  }
+}
+
+.container__service_work .work__content_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container__service_work .work__title_section {
+    flex-direction: column;
+    row-gap: 15px;
+    & .btn {
+      align-self: flex-start;
+    }
+  }
+}
