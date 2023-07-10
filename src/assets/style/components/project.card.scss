@@ -1,0 +1,89 @@
+@import "../main.style/variable.scss";
+
+.project__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: $neutral_1;
+  padding: 0 20px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex: none;
+  height: auto;
+  border: 5px solid white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  //   max-height: 300px;
+}
+
+.card_left_cover {
+  & .project__overview {
+    padding-left: 25px !important;
+    order: 5 !important;
+  }
+  & .project__cover {
+    order: 1 !important;
+  }
+}
+.project__card .project__overview {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 35px 0;
+  flex: none;
+  & .project__category {
+    color: white;
+    font-family: $font_regular;
+    font-size: 1rem;
+    opacity: 0.7;
+  }
+  & .project__title {
+    color: white;
+    font-family: $font_medium;
+    font-size: 1.3rem;
+  }
+  & .project__text_overview {
+    font-family: $font_light;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    opacity: 0.5;
+    color: white;
+  }
+  & .btn {
+    align-self: flex-start;
+    & svg * {
+      fill: $neutral_1 !important;
+    }
+  }
+}
+
+.project__card .project__cover {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    transition: all 0.3s linear;
+  }
+}
+.project__card {
+  &:hover {
+    & img {
+      transform: scale(1.3);
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .project__card {
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+  }
+  .card_left_cover {
+    & .project__overview {
+      padding-left: 0 !important;
+    }
+  }
+}
