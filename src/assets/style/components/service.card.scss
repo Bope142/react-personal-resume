@@ -1,0 +1,43 @@
+@import "../main.style/variable.scss";
+
+.service__card {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  border-radius: 0.3rem;
+  flex: none;
+  padding: 15px;
+  overflow: hidden;
+  background: rgba($neutral_1, 1);
+  border: 5px solid white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  & .card__icons {
+    display: flex;
+    flex: none;
+    & svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      & * {
+        fill: white;
+      }
+    }
+  }
+  & .card__overview {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    & .title__service {
+      color: white;
+      font-family: $font_medium;
+      font-size: 1rem;
+    }
+    & .service__overview {
+      color: white;
+      font-family: $font_light;
+      font-size: 0.9rem;
+      text-align: justify;
+      opacity: 0.5;
+      line-height: 1.3rem;
+    }
+  }
+}
