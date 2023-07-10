@@ -1,0 +1,60 @@
+@import "../main.style/variable.scss";
+
+.experience_card {
+  flex: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  & .experience__date {
+    padding-top: 0;
+    padding-right: 20px;
+    flex: none;
+    font-family: $font_regular;
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+
+  & .experience__details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    // flex: none;
+    padding-left: 25px;
+    position: relative;
+    padding-bottom: 25px;
+    border-left: 2px solid $neutral_1;
+    & .experience__job_title {
+      font-family: $font_medium;
+      font-size: 1rem;
+    }
+    & .experience__overview {
+      font-family: $font_light;
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+    }
+    &::after {
+      content: "";
+      background: $neutral_1;
+      height: 12px;
+      width: 12px;
+      border-radius: 0.2rem;
+      top: 0%;
+      position: absolute;
+      left: -1.2%;
+    }
+    &::before {
+      content: "";
+      background: $neutral_1;
+      height: 100%;
+      width: 2px;
+      position: absolute;
+      left: 0.5%;
+      top: 10%;
+      display: none;
+    }
+  }
+}
+
+.experience_card_last .experience__details {
+  border: none !important;
+}
