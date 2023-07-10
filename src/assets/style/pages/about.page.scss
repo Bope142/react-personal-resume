@@ -1,0 +1,109 @@
+@import "../main.style/variable.scss";
+
+.container__about_page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about__overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.about__overview .overview {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  justify-content: center;
+  & .overview__intro_text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  & .overview__full_text {
+    font-family: $font_light;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  & .btn {
+    align-self: flex-start;
+  }
+}
+
+.about__overview .overview__profil {
+  display: flex;
+  flex: none;
+  position: relative;
+  align-items: flex-start;
+
+  & .my__profil {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    margin-right: auto;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      margin-right: auto;
+      object-fit: contain;
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      background: #1b2845;
+      height: 70%;
+      width: 79%;
+      position: absolute;
+      bottom: -1.5%;
+      left: 5%;
+      border: white 5px solid;
+      border-radius: 0.5rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+    }
+  }
+}
+
+.about__experience {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.about__experience .experience__overview {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  & .btn {
+    align-self: flex-start;
+  }
+  & .texte__overview {
+    font-family: $font_light;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.about__experience .experience__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about__overview {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__overview .overview {
+    order: 1 !important;
+  }
+  .about__overview .overview__profil {
+    order: 1 !important;
+  }
+  .about__experience {
+    display: flex;
+    flex-direction: column;
+  }
+}
