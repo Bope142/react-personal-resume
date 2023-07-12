@@ -18,9 +18,10 @@
   z-index: 4;
   outline: none;
   font-family: $font_regular;
+  opacity: 0.8;
   &::after {
     content: "";
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
     position: absolute;
     height: 100%;
     width: 16%;
@@ -38,13 +39,15 @@
     height: 1.3rem;
     width: 1.3rem;
     & * {
-      fill: $neutral_1;
+      fill: white;
     }
   }
   &:hover {
     color: $neutral_1 !important;
+    opacity: 1;
     &::after {
       width: 100%;
+      background: white;
     }
     & svg {
       & * {
@@ -54,9 +57,11 @@
   }
 }
 .active-item {
-  background: $neutral_1;
-  & * {
-    color: $neutral_1 !important;
+  color: $neutral_1 !important;
+  opacity: 1;
+  &::after {
+    width: 100%;
+    background: white;
   }
   & svg {
     & * {

@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: $neutral_1;
-  padding: 0 20px;
+  padding: 0 0;
   border-radius: 0.5rem;
   overflow: hidden;
   flex: none;
@@ -16,7 +16,6 @@
 
 .card_left_cover {
   & .project__overview {
-    padding-left: 25px !important;
     order: 5 !important;
   }
   & .project__cover {
@@ -27,7 +26,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-  padding: 35px 0;
+  padding: 35px 15px;
   flex: none;
   & .project__category {
     color: white;
@@ -80,10 +79,5 @@
     display: flex;
     flex-direction: column;
     max-height: auto;
-  }
-  .card_left_cover {
-    & .project__overview {
-      padding-left: 0 !important;
-    }
   }
 }

@@ -1,0 +1,52 @@
+@import "../main.style/variable.scss";
+
+.input__box_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 5px;
+  & label {
+    font-family: $font_regular;
+    font-size: 0.9rem;
+  }
+  & .content {
+    display: flex;
+    padding: 15px;
+    overflow: hidden;
+    column-gap: 10px;
+    border: 2px solid rgba($neutral_1, 0.068);
+    border-radius: 0.3rem;
+    transition: all 0.3s linear;
+    & .input__icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      & svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        opacity: 0.4;
+        transition: all 0.3s linear;
+        & * {
+          fill: $neutral_1;
+        }
+      }
+    }
+  }
+}
+
+.input__form {
+  border: none;
+  outline: none;
+  font-family: $font_regular;
+  font-size: 0.8rem;
+}
+
+.content:has(:focus-visible) {
+  border: 2px solid $neutral_1;
+  & .input__icons {
+    & svg {
+      opacity: 1;
+    }
+  }
+}
