@@ -9,3 +9,9 @@ export function ButtonIcons(props) {
     </button>
   );
 }
+
+export function SimpleButton(props) {
+  return (
+    <button className={"btn  " + props.classColorBtn}>{props.label}</button>
+  );
+}
