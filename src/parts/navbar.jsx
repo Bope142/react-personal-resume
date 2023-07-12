@@ -1,5 +1,5 @@
 import React from "react";
-import NavLinkNavbar from "../components/navLinkNavbar";
+import { NavLinkNavbar, selectItemNavBar } from "../components/navLinkNavbar";
 import { ReactComponent as home_icons } from "../assets/icons/home.svg";
 import { ReactComponent as contact_icons } from "../assets/icons/contact.svg";
 import { ReactComponent as service_icons } from "../assets/icons/service.svg";
@@ -36,31 +36,74 @@ const BottomSectionNav = () => {
     </div>
   );
 };
-export default function Navbar() {
-  return (
-    <div className="nav-bar">
-      <TitleNavBar />
-      <div className="link__nav">
-        <NavLinkNavbar pathLink="/" linkText="Home" icons={home_icons} />
-        <NavLinkNavbar
-          pathLink="/about"
-          linkText="About"
-          icons={contact_icons}
-        />
-        <NavLinkNavbar
-          pathLink="/service"
-          linkText="Services"
-          icons={service_icons}
-        />
-        <NavLinkNavbar pathLink="/work" linkText="Works" icons={work_icons} />
-        <NavLinkNavbar pathLink="/blog" linkText="Blog" icons={blog_icons} />
-        <NavLinkNavbar
-          pathLink="/contact"
-          linkText="Contact"
-          icons={call_icons}
-        />
+export default class Navbar extends React.Component {
+  componentDidMount() {
+    switch (window.location.pathname) {
+      case "/about":
+        selectItemNavBar(1);
+        break;
+      case "/service":
+        selectItemNavBar(2);
+        break;
+      case "/work":
+        selectItemNavBar(3);
+        break;
+      case "/blog":
+        selectItemNavBar(4);
+        break;
+      case "/contact":
+        selectItemNavBar(5);
+        break;
+      default:
+        //home page
+        selectItemNavBar(0);
+        break;
+    }
+  }
+  render() {
+    return (
+      <div className="nav-bar">
+        <TitleNavBar />
+        <div className="link__nav">
+          <NavLinkNavbar
+            index={0}
+            pathLink="/"
+            linkText="Home"
+            icons={home_icons}
+          />
+          <NavLinkNavbar
+            index={1}
+            pathLink="/about"
+            linkText="About"
+            icons={contact_icons}
+          />
+          <NavLinkNavbar
+            index={2}
+            pathLink="/service"
+            linkText="Services"
+            icons={service_icons}
+          />
+          <NavLinkNavbar
+            index={3}
+            pathLink="/work"
+            linkText="Works"
+            icons={work_icons}
+          />
+          <NavLinkNavbar
+            index={4}
+            pathLink="/blog"
+            linkText="Blog"
+            icons={blog_icons}
+          />
+          <NavLinkNavbar
+            index={5}
+            pathLink="/contact"
+            linkText="Contact"
+            icons={call_icons}
+          />
+        </div>
+        <BottomSectionNav />
       </div>
-      <BottomSectionNav />
-    </div>
-  );
+    );
+  }
 }

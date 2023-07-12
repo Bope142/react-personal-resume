@@ -75,6 +75,23 @@
   }
 }
 
+.active-item-mobile {
+  & .text-link {
+    opacity: 1 !important;
+  }
+  & svg {
+    transform: translateY(-70%) !important;
+    & * {
+      fill: white !important;
+    }
+  }
+  &::after {
+    content: "" !important;
+    display: flex !important;
+    background: $neutral_1 !important;
+    transform: scale(1) !important;
+  }
+}
 @keyframes pulse {
   0% {
     transform: scale(0.95);
