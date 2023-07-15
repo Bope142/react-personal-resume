@@ -3,7 +3,6 @@ import "../assets/style/components/project.card.scss";
 import { ButtonIcons } from "./button";
 import { ReactComponent as linking_icons } from "../assets/icons/linking.svg";
 export default function ProjectCard(props) {
-  console.log(props.rigthPos);
   let classList = "";
   if (props.rigthPos) {
     classList = "project__card";
