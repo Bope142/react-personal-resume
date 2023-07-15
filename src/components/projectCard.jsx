@@ -7,7 +7,7 @@ export default function ProjectCard(props) {
   if (props.rigthPos) {
     classList = "project__card";
   } else {
-    classList = "project__card card_left_cover";
+    classList = "project__card  card_left_cover";
   }
   return (
     <div className={classList}>
