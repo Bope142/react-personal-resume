@@ -13,10 +13,11 @@ import { SimpleButton } from "../components/button";
 const ContactSectionTitle = () => {
   return (
     <section className="contact__title_section">
-      <TitleSection title="Get in touch" />
+      <TitleSection title="Entrer en contact" />
       <p className="text">
-        If you need a web developer and want to know more about my services, do
-        not hesitate to contact me by email or by phone.
+        Si vous avez besoin d'un développeur web et souhaitez en savoir plus sur
+        mes services, faites-le n'hésitez pas à me contacter par email ou par
+        téléphone.
       </p>
     </section>
   );
@@ -47,24 +48,24 @@ const ContactFom = () => {
   const listValueInputComponent = [
     {
       icons: user_icons,
-      label: "Your Name",
+      label: "Votre nom",
       name: "user-name",
       type: "text",
-      placeholder: "Your Name",
+      placeholder: "Votre nom",
     },
     {
       icons: sms_icons,
-      label: "Mail",
+      label: "Email",
       name: "user-email",
       type: "email",
-      placeholder: "Your Email",
+      placeholder: "Votre Email",
     },
     {
       icons: call_icons,
-      label: "Your Phone Number",
+      label: "Votre Numero de téléphone",
       name: "user-phone",
       type: "phone",
-      placeholder: "Your phone number",
+      placeholder: "Votre Numero de téléphone",
     },
   ];
   const componentInput = listValueInputComponent.map((item) => (
@@ -84,11 +85,11 @@ const ContactFom = () => {
           <div className="content-left">{componentInput}</div>
           <Memo
             name="message-user"
-            placeholder="Your message"
+            placeholder="Votre message"
             label="Message"
           />
         </div>
-        <SimpleButton label="Send Message" classColorBtn="btn-clr-black" x />
+        <SimpleButton label="Envoyer" classColorBtn="btn-clr-black" x />
       </form>
     </div>
   );

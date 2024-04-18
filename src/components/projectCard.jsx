@@ -17,8 +17,9 @@ export default function ProjectCard(props) {
         <p className="project__text_overview">{props.overview}</p>
         <ButtonIcons
           classColorBtn="btn-clr-white"
-          label="See  Projects "
+          label="Voir le projet "
           icons={linking_icons}
+          link={props.link}
         />
       </div>
       <div className="project__cover">

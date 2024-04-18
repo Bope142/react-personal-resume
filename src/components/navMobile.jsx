@@ -5,7 +5,7 @@ import { ReactComponent as home_icons } from "../assets/icons/home.svg";
 import { ReactComponent as contact_icons } from "../assets/icons/contact.svg";
 import { ReactComponent as service_icons } from "../assets/icons/service.svg";
 import { ReactComponent as work_icons } from "../assets/icons/work.svg";
-import { ReactComponent as blog_icons } from "../assets/icons/blog.svg";
+// import { ReactComponent as blog_icons } from "../assets/icons/blog.svg";
 import { ReactComponent as call_icons } from "../assets/icons/call.svg";
 
 export const selectItemNavBar = (index) => {
@@ -45,11 +45,9 @@ export default class NavMobile extends React.Component {
       case "/work":
         selectItemNavBar(3);
         break;
-      case "/blog":
-        selectItemNavBar(4);
-        break;
+
       case "/contact":
-        selectItemNavBar(5);
+        selectItemNavBar(4);
         break;
       default:
         //home page
@@ -79,14 +77,9 @@ export default class NavMobile extends React.Component {
           linkText="Works"
           icons={work_icons}
         />
+
         <ItemNav
           index={4}
-          pathLink="/blog"
-          linkText="Blog"
-          icons={blog_icons}
-        />
-        <ItemNav
-          index={5}
           pathLink="/contact"
           linkText="Contact"
           icons={call_icons}

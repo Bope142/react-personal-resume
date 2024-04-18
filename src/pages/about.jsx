@@ -8,22 +8,25 @@ import Experience from "../components/experience";
 const Overiew = () => {
   return (
     <div className="overview">
-      <TitleSection title="More about me" />
+      <TitleSection title="Qui suis-je ?" />
       <p className="overview__intro_text">
-        👋 Hello ! I'm Norbert, a software Engineer based in DRC 🎆. I'm vary
-        pasionate about the work❤️ that I do
+        Bonjour ! Je suis Norbert, un Développeur Web & UI/UX Designer basé en
+        RDC 🎆. Passionné par mon travail ❤️, je crée des solutions innovantes
+        pour le Web. Découvrez mon portfolio et explorez mon univers de
+        développement.
       </p>
       <p className="overview__full_text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-        qui harum distinctio earum molestias. Fuga quaerat maxime rem odio.
-        Maxime nulla dolorum blanditiis voluptate, consectetur distinctio.
-        Doloremque incidunt odit quo.
+        💻🚀 Développeur polyvalent et créateur tech, je marie la puissance du
+        code à l'esthétique de l'UI/UX pour donner vie à des solutions
+        innovantes. Mon bagage académique solide m'a armé d'une compréhension
+        approfondie des technologies de l'information, tandis que mon expérience
+        pratique m'a permis de perfectionner mes compétences en développement.
       </p>
-      <ButtonIcons
+      {/* <ButtonIcons
         classColorBtn="btn-clr-black"
-        label="See All Project "
+        label="Voir mes récentes réalisations "
         icons={linking_icons}
-      />
+      /> */}
     </div>
   );
 };
@@ -50,28 +53,19 @@ const MyExperience = () => {
   return (
     <div className="experience__content">
       <Experience
-        dateExperience="NOV 2017 - PRESENT"
-        job="Web Developer at XYZ Agency"
-        overview=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit,
-        quisquam? Dolore dicta nulla, voluptatem hic voluptates magnam distinctio,
-        vitae voluptas reiciendis itaque repudiandae fugiat libero modi provident
-        quis enim alias!"
+        dateExperience="NOV 2023 - DEC 2023"
+        job="Développeur Backend NodeJs"
+        overview="Développement d’une api rest pour la gestion administrative de l’entreprise GARI, et l’alimentations des données à l’application mobile."
       />
       <Experience
-        dateExperience="NOV 2017 - PRESENT"
-        job="Web Developer at XYZ Agency"
-        overview=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit,
-        quisquam? Dolore dicta nulla, voluptatem hic voluptates magnam distinctio,
-        vitae voluptas reiciendis itaque repudiandae fugiat libero modi provident
-        quis enim alias!"
+        dateExperience="JANV 2023 - FEV 2023"
+        job="Développeur Web Frontend"
+        overview="conception et réalisation du site vitrine pour le cabinet IA+ Consulting"
       />
       <Experience
-        dateExperience="NOV 2017 - PRESENT"
-        job="Web Developer at XYZ Agency"
-        overview=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit,
-        quisquam? Dolore dicta nulla, voluptatem hic voluptates magnam distinctio,
-        vitae voluptas reiciendis itaque repudiandae fugiat libero modi provident
-        quis enim alias!"
+        dateExperience="AVRIL 2020 - PRESENT"
+        job="Consultant & Développeur Delphi"
+        overview=" conception, réalisation et maintenance d’un logiciel de gestion pour l’imprimerie BLESS CENTER PRINT."
         isLastcard={true}
       />
     </div>
@@ -80,15 +74,18 @@ const MyExperience = () => {
 const ExperienceOverview = () => {
   return (
     <div className="experience__overview">
-      <TitleSection title="My experience" />
+      <TitleSection title="Mon expérience" />
       <p className="texte__overview">
-        I've had the pleasure to work with companies 🏢 across a variety of
-        industries 🏛️ U'm alaways interested in now ✨ and exciting adventures🤩
+        J'ai eu le plaisir de travailler avec des 🏢 dans divers secteurs 🏛️ Je
+        suis toujours intéressé par les aventures ✨ et passionnantes🤩
       </p>
       <ButtonIcons
         classColorBtn="btn-clr-black"
-        label="Download Resume"
+        label="Télécharger mon CV"
         icons={linking_icons}
+        link={
+          "https://res.cloudinary.com/dxtwgo8aa/image/upload/v1713437960/qgan8xz1r5f11d6eoixo.pdf"
+        }
       />
     </div>
   );

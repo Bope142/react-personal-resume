@@ -1,8 +1,8 @@
 import React from "react";
 import "../assets/style/pages/service.page.scss";
 import TitleSection from "../components/titleSection";
-import { ButtonIcons } from "../components/button";
-import { ReactComponent as linking_icons } from "../assets/icons/linking.svg";
+// import { ButtonIcons } from "../components/button";
+// import { ReactComponent as linking_icons } from "../assets/icons/linking.svg";
 import ServiceCard from "../components/serviceCard";
 import { ReactComponent as app_icons } from "../assets/icons/app.svg";
 import { ReactComponent as support_icons } from "../assets/icons/support.svg";
@@ -14,8 +14,8 @@ import { ReactComponent as security_icons } from "../assets/icons/security.svg";
 const OveriewService = () => {
   return (
     <section className="service__overview">
-      <TitleSection title="My Services" />
-      <p className="overview__detail">
+      <TitleSection title="Mes Services" />
+      {/* <p className="overview__detail">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
         voluptatibus exercitationem consectetur dolore corrupti nihil explicabo
         optio repellendus adipisci facilis reiciendis cumque dolorem
@@ -25,7 +25,7 @@ const OveriewService = () => {
         classColorBtn="btn-clr-black"
         label="More Details "
         icons={linking_icons}
-      />
+      /> */}
     </section>
   );
 };
@@ -34,39 +34,39 @@ const ServiceList = () => {
   const listService = [
     {
       icons: app_icons,
-      title: "Application Development :",
+      title: "Développement d'applications  web & site web :",
       overview:
-        "Design and development of custom software to meet user's needs",
+        "Conception et développement des application web & site web  personnalisés pour répondre aux besoins des utilisateurs",
     },
     {
       icons: support_icons,
-      title: "Maintenance and support:",
+      title: "Entretien et assistance :",
       overview:
-        "Update and maintenance of software to ensure its optimal functioning and satisfaction of customer requirements.",
+        "Mise à jour et maintenance du logiciel pour assurer son fonctionnement optimal et la satisfaction des exigences des clients.",
     },
     {
       icons: software_icons,
-      title: "software design :",
+      title: "UI/UX Design",
       overview:
-        "Design and development of custom software to meet user's needs",
+        "Création d'interfaces utilisateur attrayantes et intuitives pour une expérience utilisateur optimale.",
     },
     {
       icons: test_icons,
-      title: "Assessment and testing :",
+      title: "Évaluation et tests:",
       overview:
-        "Software testing and quality assessment of services and products.",
+        "Tests de logiciels et évaluation de la qualité des services et des produits.",
     },
     {
       icons: consultation_icons,
-      title: "Consultation :",
+      title: " Consultation:",
       overview:
-        "Technical assistance and advice for the development and use of software.",
+        "Assistance et conseils techniques pour le développement et l'utilisation de logiciels.",
     },
     {
       icons: security_icons,
-      title: "Security :",
+      title: "Sécurité :",
       overview:
-        "Implementation and management of security measures for computer systems and their data.",
+        "Mise en place et gestion des mesures de sécurité des systèmes informatiques et de leurs données.",
     },
   ];
   const allService = listService.map((service, index) => (

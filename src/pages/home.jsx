@@ -8,15 +8,16 @@ import { ReactComponent as phone_icons } from "../assets/icons/phone.svg";
 import { ReactComponent as envelope_icons } from "../assets/icons/envelope.svg";
 import { ReactComponent as github_icons } from "../assets/icons/github.svg";
 import { ReactComponent as facebook_icons } from "../assets/icons/facebook_f.svg";
-import { ReactComponent as instagram_icons } from "../assets/icons/instagram.svg";
+// import { ReactComponent as instagram_icons } from "../assets/icons/instagram.svg";
+import { ReactComponent as linkedin_icons } from "../assets/icons/linkedin.svg";
 import IconsBulleLink from "../components/iconsBulle";
 
 const TextOverivew = () => {
   return (
     <div className="text__overview">
-      <span>MY NAME</span>
+      <span>JE SUIS</span>
       <span>
-        IS <strong>NORBERT YEMUANG...</strong>
+        <strong>NORBERT YEMUANG...</strong>
       </span>
     </div>
   );
@@ -24,7 +25,8 @@ const TextOverivew = () => {
 const MyOccupation = () => {
   return (
     <div className="my__occupation">
-      <strong>Software Engineer</strong> based in <strong>DRC</strong>
+      <strong>Développeur Web & UI/UX Designer </strong> basé en{" "}
+      <strong>RDC</strong>
     </div>
   );
 };
@@ -44,9 +46,18 @@ const Contact = () => {
 const LinkSocialMedia = () => {
   return (
     <div className="links">
-      <IconsBulleLink pathLink="/" icons={github_icons}></IconsBulleLink>
-      <IconsBulleLink pathLink="/" icons={facebook_icons}></IconsBulleLink>
-      <IconsBulleLink pathLink="/" icons={instagram_icons}></IconsBulleLink>
+      <IconsBulleLink
+        pathLink="https://github.com/Bope142/"
+        icons={github_icons}
+      ></IconsBulleLink>
+      <IconsBulleLink
+        pathLink="https://web.facebook.com/profile.php?id=100063692963866"
+        icons={facebook_icons}
+      ></IconsBulleLink>
+      <IconsBulleLink
+        pathLink="https://www.linkedin.com/in/norbert-yemuang-bope-69662318a"
+        icons={linkedin_icons}
+      ></IconsBulleLink>
     </div>
   );
 };
@@ -58,8 +69,11 @@ export default function HomePage() {
         <MyOccupation />
         <ButtonIcons
           classColorBtn="btn-clr-black"
-          label="Let's talk with me "
+          label="Télécharger mon CV"
           icons={linking_icons}
+          link={
+            "https://res.cloudinary.com/dxtwgo8aa/image/upload/v1713437960/qgan8xz1r5f11d6eoixo.pdf"
+          }
         />
         <Contact />
       </div>

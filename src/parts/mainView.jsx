@@ -5,7 +5,7 @@ import HomePage from "../pages/home";
 import AboutPage from "../pages/about";
 import ServicePage from "../pages/services";
 import WorkPage from "../pages/work";
-import BlogPage from "../pages/blog";
+// import BlogPage from "../pages/blog";
 import ContactPage from "../pages/contact";
 import NavMobile from "../components/navMobile";
 export default function MainView() {
@@ -16,7 +16,7 @@ export default function MainView() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/service" element={<ServicePage />} />
         <Route path="/work" element={<WorkPage />} />
-        <Route path="/blog" element={<BlogPage />} />
+        {/* <Route path="/blog" element={<BlogPage />} /> */}
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Outlet />
